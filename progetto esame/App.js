@@ -73,6 +73,7 @@
 
     render(){
       return(
+        <ScrollView>
       <View>
         <Text style={styles.paragraph}> Menù </Text>
 
@@ -89,6 +90,7 @@
           keyExtractor={item => item.name}/>
         
       </View>
+      </ScrollView>
       )}
   };
 
