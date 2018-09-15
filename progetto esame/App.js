@@ -42,14 +42,22 @@ class Men extends React.Component{
     )
   }
   
+  listByState(){
 
+    if(!this.state.result)
+      return tmp=[...this.state.dataSource];
+    
+    else
+      return tmp=[...this.state.listTmp]
+  }
+  
 
   render(){
     return(
     <View>
       <Text style={styles.paragraph}> Menù </Text>
       <FlatList
-        data={this.state.dataSource}
+        data={this.listByState()}//this.state.dataSource
         renderItem={this.renderRow}
         keyExtractor={item => item.name}
               />
